@@ -1,0 +1,100 @@
+/* Center the start menu */
+#start-menu {
+    text-align: center;
+    margin-top: 20%;
+}
+
+/* Style for the game container with a jungle background */
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('jungle-background.jpg') no-repeat center center; /* Jungle background image */
+    background-size: cover;
+    overflow: hidden;
+}
+
+#tiger {
+    width: 100px;
+    height: 100px;
+    background: url('tiger.png') no-repeat center center; /* Tiger image */
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style for the enemies */
+.enemy {
+    position: absolute;
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    background-image: url('poacher.png'); /* Poacher image */
+    background-size: cover;
+}
+
+/* Style for the enemy (poacher) health bar */
+.enemy .health-bar {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background-color: red;
+}
+
+.enemy .health-bar .health {
+    height: 100%;
+    background-color: green;
+}
+
+/* Style for the tiger's health bar */
+.tiger-health-bar {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background-color: gray;
+}
+
+.tiger-health-bar .health {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+/* Style for hiding the game container initially */
+#game-container.hidden {
+    display: none;
+}
+
+/* Style for the score display */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style for the end game message */
+#end-game-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style for buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
